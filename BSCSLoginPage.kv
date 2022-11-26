@@ -26,6 +26,7 @@ MDScreen:
         radius : 35
 
         MDTextField :
+            id: Email
             mode : "rectangle"
             size_hint : None, None
             size : 300, 50
@@ -38,6 +39,7 @@ MDScreen:
             line_color_normal : "black"
 
         MDTextField :
+            id: Password
             mode : "rectangle"
             size_hint : None, None
             size : 300, 50
@@ -52,6 +54,7 @@ MDScreen:
             border: (30, 30, 30, 30)
             line_color_focus : "black"
             line_color_normal : "black"
+            
 
         MDRaisedButton :
             text: "LOGIN"
@@ -61,6 +64,8 @@ MDScreen:
             pos_hint: {"center_x": .5}
             size_hint: 0.7, None
             elevation : 2
+            on_release: app.send_data(Email, Password)
+
 
         Widget:
             size_hint_y : None
@@ -80,3 +85,4 @@ MDScreen:
             font_size : 16
             pos_hint : {"center_x": .5, "y": .6}
             size_hint : 0.1, None
+            

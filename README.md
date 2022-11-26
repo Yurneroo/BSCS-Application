@@ -1,1 +1,1 @@
-# BSCS-Application
+# BSCS Application Project

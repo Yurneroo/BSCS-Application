@@ -1,0 +1,51 @@
+MainWidget:
+
+    Button:
+        background_color: "yellow"
+        text: "Login"
+        size: 220, 40
+        pos: 280, 200
+    Button:
+        background_color: (1,1,1,0)
+        text: "Forgot your username or password?"
+        underline: True
+        color: "black"
+        size: 250, 30
+        pos: 270, 150
+
+    TextInput:
+        size: 300, 30
+        pos: 240, 340
+
+    TextInput:
+        size: 300, 30
+        pos: 240, 280
+        password: True
+
+    GridLayout:
+        cols: 2
+        pos: 223, 210
+
+        CheckBox:
+            on_active: root.checkbox_click(self, self.active)
+            color: "black"
+
+        Label:
+            text: "        Remember me"
+            color: "black"
+
+    Label:
+        text: "BSCS"
+        font_size: 60
+        pos: 340, 420
+        color: "black"
+
+    Label:
+        text: "Username or Email"
+        pos: 260, 330
+        color: "black"
+
+    Label:
+        text: "Password"
+        pos: 230, 270
+        color: "black"

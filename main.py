@@ -8,10 +8,14 @@ class MainWidget(Widget):
         pass
 
 
-class BSCSapp(App):
+class BSCS_login_page(App):
     def build(self):
         Window.clearcolor = (1, 1, 1, 1)
 
 
-BSCSapp().run()
+class BSCS_main_page(App):
+    pass
 
+
+BSCS_login_page().run()
+BSCS_main_page().run()

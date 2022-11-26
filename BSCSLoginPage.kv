@@ -1,0 +1,82 @@
+MDScreen:
+    md_bg_color : "183368"
+
+    MDCard :
+        size_hint : None,None
+        size : 510, 60
+        pos_hint : {"x": -.1, "y":.8}
+        md_bg_color : "FBB415"
+        elevation : 2
+        radius : 30
+
+        MDLabel :
+            text : "Bachelor of Science in Computer Science"
+            font_color : "183368"
+            font_size: 18
+            halign : "center"
+
+    MDCard :
+        orientation : "vertical"
+        size_hint : None,None
+        size : 380, 370
+        pos_hint : {"center_x":.5, "center_y":.5}
+        elevation : 2
+        padding : 20
+        spacing : 50
+        radius : 35
+
+        MDTextField :
+            mode : "rectangle"
+            size_hint : None, None
+            size : 300, 50
+            hint_text_color : "black"
+            font_size : 15
+            pos_hint : {"center_x":.5}
+            hint_text : "Username or Email"
+            padding : 15
+            line_color_focus : "black"
+            line_color_normal : "black"
+
+        MDTextField :
+            mode : "rectangle"
+            size_hint : None, None
+            size : 300, 50
+            background_color : "lightgray"
+            hint_text_color : "black"
+            elevation : 3
+            font_size : 15
+            pos_hint : {"center_x":.5}
+            hint_text : "Password"
+            password : True
+            padding : 15
+            border: (30, 30, 30, 30)
+            line_color_focus : "black"
+            line_color_normal : "black"
+
+        MDRaisedButton :
+            text: "LOGIN"
+            text_color: "black"
+            md_bg_color : "FBB415"
+            font_size : 25
+            pos_hint: {"center_x": .5}
+            size_hint: 0.7, None
+            elevation : 2
+
+        Widget:
+            size_hint_y : None
+            height : -20
+
+    MDCard :
+        size_hint : None,None
+        size : 480, 180
+        pos_hint : {"center_x":.5, "y": -.1}
+        md_bg_color : "FBB415"
+        elevation : 2
+        radius: 60
+
+        MDFlatButton :
+            text : "Forgot your username or password?"
+            text_color : "183368"
+            font_size : 16
+            pos_hint : {"center_x": .5, "y": .6}
+            size_hint : 0.1, None

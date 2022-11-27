@@ -54,7 +54,7 @@ MDScreen:
             border: (30, 30, 30, 30)
             line_color_focus : "black"
             line_color_normal : "black"
-            
+
 
         MDRaisedButton :
             text: "LOGIN"
@@ -66,7 +66,6 @@ MDScreen:
             elevation : 2
             on_release: app.send_data(Email, Password)
 
-
         Widget:
             size_hint_y : None
             height : -20
@@ -76,7 +75,7 @@ MDScreen:
         size : 480, 180
         pos_hint : {"center_x":.5, "y": -.1}
         md_bg_color : "FBB415"
-        elevation : 2
+        elevation : 3
         radius: 60
 
         MDFlatButton :
@@ -85,4 +84,3 @@ MDScreen:
             font_size : 16
             pos_hint : {"center_x": .5, "y": .6}
             size_hint : 0.1, None
-            

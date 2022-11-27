@@ -16,8 +16,6 @@ MDScreen :
             halign : "center"
 
     MDCard :
-        orientation : "vertical"
-        cols : 2
         size_hint : None,None
         size : 380, 480
         pos_hint : {"center_x":.5, "center_y":.49}
@@ -25,6 +23,75 @@ MDScreen :
         padding : 20
         spacing : 50
         radius : 35
+
+
+        GridLayout :
+            size : 380, 452
+            size_hint : None, None
+            pos_hint : {"center_x":.5, "center_y":.5}
+            cols : 2
+            padding : 15
+
+            MDIconButton :
+                icon : "img/account.png"
+                size_hint : None, None
+                icon_size: "110sp"
+
+            MDIconButton :
+                icon : "img/schedule.png"
+                size_hint : None, None
+                icon_size: "110sp"
+
+            MDLabel :
+                text : "Account"
+                font_color : "183368"
+                font_size : 18
+
+
+            MDLabel :
+                text : "Schedule"
+                font_color : "183368"
+                font_size: 18
+
+            MDIconButton :
+                icon : "img/announcements.png"
+                size_hint : None, None
+                icon_size: "110sp"
+
+            MDIconButton :
+                icon : "img/forum.png"
+                size_hint : None, None
+                icon_size: "110sp"
+
+            MDLabel :
+                text : "Announcements"
+                font_color : "183368"
+                font_size : 18
+
+            MDLabel :
+                text : "Forum"
+                font_color : "183368"
+                font_size: 18
+
+            MDIconButton :
+                icon : "img/blank.png"
+                size_hint : None, None
+                icon_size: "110sp"
+
+            MDIconButton :
+                icon : "img/settings.png"
+                size_hint : None, None
+                icon_size: "110sp"
+
+            MDLabel :
+                text : "Consultation"
+                font_color : "183368"
+                font_size : 18
+
+            MDLabel :
+                text : "Settings"
+                font_color : "183368"
+                font_size: 18
 
     MDCard :
         size_hint : None,None
@@ -45,5 +112,5 @@ MDScreen :
         size : 480, 170
         pos_hint : {"center_x":.5, "y": -.1}
         md_bg_color : "FBB415"
-        elevation : 2
+        elevation : 3
         radius: 60

@@ -1,0 +1,298 @@
+MainWidget :
+
+    screen_manager : screen_manager
+
+    ScreenManager :
+        id : screen_manager
+        home : main
+
+        Screen :
+            id : login
+            name : 'login'
+
+            canvas.before :
+                Color:
+                    rgba : 24/255, 51/255, 104/255, 1
+                Rectangle :
+                    pos : self.pos
+                    size : self.size
+            MDCard :
+                size_hint : None,None
+                size : 510, 60
+                pos_hint : {"x": -.1, "y":.8}
+                md_bg_color : "FBB415"
+                elevation : 2
+                radius : 30
+
+                MDLabel :
+                    text : "Bachelor of Science in Computer Science"
+                    font_color : "183368"
+                    font_size: 18
+                    halign : "center"
+
+            MDCard :
+                orientation : "vertical"
+                size_hint : None,None
+                size : 380, 370
+                pos_hint : {"center_x":.5, "center_y":.5}
+                elevation : 2
+                padding : 20
+                spacing : 50
+                radius : 35
+
+                MDTextField :
+                    id: Email
+                    mode : "rectangle"
+                    size_hint : None, None
+                    size : 300, 50
+                    hint_text_color : "black"
+                    font_size : 15
+                    pos_hint : {"center_x":.5}
+                    hint_text : "Username or Email"
+                    padding : 15
+                    line_color_focus : "black"
+                    line_color_normal : "black"
+
+                MDTextField :
+                    id: Password
+                    mode : "rectangle"
+                    size_hint : None, None
+                    size : 300, 50
+                    background_color : "lightgray"
+                    hint_text_color : "black"
+                    elevation : 3
+                    font_size : 15
+                    pos_hint : {"center_x":.5}
+                    hint_text : "Password"
+                    password : True
+                    padding : 15
+                    border: (30, 30, 30, 30)
+                    line_color_focus : "black"
+                    line_color_normal : "black"
+
+
+                MDRaisedButton :
+                    text: "LOGIN"
+                    text_color: "black"
+                    md_bg_color : "FBB415"
+                    font_size : 25
+                    pos_hint: {"center_x": .5}
+                    size_hint: 0.7, None
+                    elevation : 2
+                    on_press : screen_manager.current = "main"
+
+                Widget:
+                    size_hint_y : None
+                    height : -20
+
+            MDCard :
+                size_hint : None,None
+                size : 480, 180
+                pos_hint : {"center_x":.5, "y": -.1}
+                md_bg_color : "FBB415"
+                elevation : 3
+                radius: 60
+
+                MDFlatButton :
+                    text : "Forgot your username or password?"
+                    text_color : "183368"
+                    font_size : 16
+                    pos_hint : {"center_x": .5, "y": .6}
+                    size_hint : 0.1, None
+
+        Screen :
+            id : main
+            name : 'main'
+
+            canvas.before :
+                Color:
+                    rgba : 24/255, 51/255, 104/255, 1
+                Rectangle :
+                    pos : self.pos
+                    size : self.size
+
+            MDCard :
+                size_hint : None,None
+                size : 400, 50
+                pos_hint : {"center_x": .5, "y":.9}
+                md_bg_color : "FBB415"
+                elevation : 2
+                radius : 25
+
+                MDLabel :
+                    text : "Bachelor of Science in Computer Science"
+                    font_color : "183368"
+                    font_size: 17
+                    halign : "center"
+
+            MDCard :
+                size_hint : None,None
+                size : 380, 480
+                pos_hint : {"center_x":.5, "center_y":.49}
+                elevation : 2
+                padding : 20
+                spacing : 50
+                radius : 35
+
+
+                GridLayout :
+                    size : 380, 452
+                    size_hint : None, None
+                    pos_hint : {"center_x":.5, "center_y":.5}
+                    cols : 2
+                    padding : 15
+
+                    MDIconButton :
+                        icon : "img/account.png"
+                        size_hint : None, None
+                        icon_size : "110sp"
+                        on_press : screen_manager.current = "account"
+
+                    MDIconButton :
+                        icon : "img/schedule.png"
+                        size_hint : None, None
+                        icon_size : "110sp"
+                        on_press : screen_manager.current = "schedule"
+
+                    MDLabel :
+                        text : "Account"
+                        font_color : "183368"
+                        font_size : 18
+
+
+                    MDLabel :
+                        text : "Schedule"
+                        font_color : "183368"
+                        font_size : 18
+
+                    MDIconButton :
+                        icon : "img/announcements.png"
+                        size_hint : None, None
+                        icon_size : "110sp"
+                        on_press : screen_manager.current = "announcements"
+
+                    MDIconButton :
+                        icon : "img/forum.png"
+                        size_hint : None, None
+                        icon_size : "110sp"
+                        on_press : screen_manager.current = "forum"
+
+                    MDLabel :
+                        text : "Announcements"
+                        font_color : "183368"
+                        font_size : 18
+
+                    MDLabel :
+                        text : "Forum"
+                        font_color : "183368"
+                        font_size: 18
+
+                    MDIconButton :
+                        icon : "img/blank.png"
+                        size_hint : None, None
+                        icon_size : "110sp"
+                        on_press : screen_manager.current = "consultation"
+
+                    MDIconButton :
+                        icon : "img/settings.png"
+                        size_hint : None, None
+                        icon_size : "110sp"
+                        on_press : screen_manager.current = "settings"
+
+                    MDLabel :
+                        text : "Consultation"
+                        font_color : "183368"
+                        font_size : 18
+
+                    MDLabel :
+                        text : "Settings"
+                        font_color : "183368"
+                        font_size : 18
+
+            MDCard :
+                size_hint : None,None
+                size : 260, 60
+                pos_hint : {"x": -.1, "y":.75}
+                md_bg_color : "FBB415"
+                elevation : 2
+                radius : 30
+
+                MDLabel :
+                    text : "Dashboard"
+                    font_color : "183368"
+                    font_size : 20
+                    halign : "center"
+
+            MDCard :
+                size_hint : None,None
+                size : 480, 170
+                pos_hint : {"center_x":.5, "y": -.1}
+                md_bg_color : "FBB415"
+                elevation : 3
+                radius: 60
+
+        Screen :
+            id : account
+            name : 'account'
+
+            canvas.before :
+                Color:
+                    rgba : 24/255, 51/255, 104/255, 1
+                Rectangle :
+                    pos : self.pos
+                    size : self.size
+
+        Screen :
+            id : schedule
+            name : 'schedule'
+
+            canvas.before :
+                Color:
+                    rgba : 24/255, 51/255, 104/255, 1
+                Rectangle :
+                    pos : self.pos
+                    size : self.size
+
+        Screen :
+            id : announcements
+            name : 'announcements'
+
+            canvas.before :
+                Color:
+                    rgba : 24/255, 51/255, 104/255, 1
+                Rectangle :
+                    pos : self.pos
+                    size : self.size
+
+        Screen :
+            id : forum
+            name : 'forum'
+
+            canvas.before :
+                Color:
+                    rgba : 24/255, 51/255, 104/255, 1
+                Rectangle :
+                    pos : self.pos
+                    size : self.size
+
+        Screen :
+            id : consultations
+            name : 'consultations'
+
+            canvas.before :
+                Color:
+                    rgba : 24/255, 51/255, 104/255, 1
+                Rectangle :
+                    pos : self.pos
+                    size : self.size
+
+        Screen :
+            id : settings
+            name : 'settings'
+
+            canvas.before :
+                Color:
+                    rgba : 24/255, 51/255, 104/255, 1
+                Rectangle :
+                    pos : self.pos
+                    size : self.size

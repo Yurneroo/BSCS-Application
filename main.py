@@ -1,26 +1,21 @@
-import kivy
-from kivy.properties import ListProperty
-from kivy.core.text import LabelBase
+from kivy.uix.floatlayout import FloatLayout
 from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.core.window import Window
-import mysql.connector
+from kivy.properties import ObjectProperty
 
 Window.size = (480, 800)
 
 
-class BSCSLoginPage(MDApp):
-    pass
+class MainWidget(FloatLayout):
 
-
-class BSCSMainPage(MDApp):
-    pass
+    screen_manager = ObjectProperty(None)
 
 
 class BSCSApp(MDApp):
     def build(self):
-        return Builder.load_file("BSCSMainPage.kv")
+        return Builder.load_file("widget.kv")
 
 
 if __name__ == "__main__":
-    BSCSMainPage().run()
+    BSCSApp().run()
